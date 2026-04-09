@@ -1,0 +1,9 @@
+MOCK RESUME
+===========
+
+Name: Jordan Vale
+Role: Research Engineer (Sample Profile)
+Location: Anytown, XX
+Email: jordan.vale@example.com
+
+This file is intentionally anonymized and contains fictional placeholder details.
