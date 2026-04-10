@@ -12,19 +12,77 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+	<style>
+		.menu-wrap {
+			position: fixed;
+			top: 1rem;
+			right: 1rem;
+			z-index: 10001;
+		}
+
+		.menu-button {
+			width: 2.5rem;
+			height: 2.5rem;
+			border: 0;
+			border-radius: 0.35rem;
+			background: rgba(34, 34, 34, 0.85);
+			color: #fff;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+		}
+
+		.menu-button span {
+			display: block;
+			width: 1.1rem;
+			height: 2px;
+			background: #fff;
+			margin: 2px 0;
+		}
+
+		.menu-panel {
+			display: none;
+			position: absolute;
+			right: 0;
+			top: 2.9rem;
+			background: rgba(34, 34, 34, 0.95);
+			border-radius: 0.35rem;
+			padding: 0.4rem 0;
+			min-width: 10rem;
+		}
+
+		.menu-panel a {
+			display: block;
+			padding: 0.45rem 0.8rem;
+			color: #fff;
+			border-bottom: 0;
+		}
+
+		.menu-panel a:hover {
+			background: rgba(255, 255, 255, 0.14);
+			color: #fff !important;
+		}
+
+		.menu-wrap.open .menu-panel {
+			display: block;
+		}
+	</style>
 </head>
 
 <body class="is-preload">
+	<nav class="menu-wrap" id="site-menu">
+		<button class="menu-button" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+			<span></span><span></span><span></span>
+		</button>
+		<div class="menu-panel" id="menu-panel">
+			<a href="index.html">Home</a>
+			<a href="all-publications.html">All Publications</a>
+		</div>
+	</nav>
 	<header id="header">
 		<div class="inner">
 			<h1><strong>Publications</strong></h1>
-			<p>
-				<label for="page-nav"><strong>Navigate:</strong></label>
-				<select id="page-nav" name="page-nav">
-					<option value="index.html">Home</option>
-					<option value="all-publications.html" selected>All Publications</option>
-				</select>
-			</p>
 		</div>
 	</header>
 
@@ -94,10 +152,18 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script>
 		(function () {
-			var pageNav = document.getElementById("page-nav");
-			if (!pageNav) return;
-			pageNav.addEventListener("change", function () {
-				if (this.value) window.location.href = this.value;
+			var menu = document.getElementById("site-menu");
+			var toggle = document.getElementById("menu-toggle");
+			if (!menu || !toggle) return;
+			toggle.addEventListener("click", function () {
+				var isOpen = menu.classList.toggle("open");
+				toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+			});
+			document.addEventListener("click", function (event) {
+				if (!menu.contains(event.target)) {
+					menu.classList.remove("open");
+					toggle.setAttribute("aria-expanded", "false");
+				}
 			});
 		})();
 	</script>
