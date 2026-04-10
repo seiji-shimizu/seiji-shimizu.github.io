@@ -18,9 +18,13 @@
 	<header id="header">
 		<div class="inner">
 			<h1><strong>Publications</strong></h1>
-			<ul class="actions">
-				<li><a href="index.html" class="button small">Home</a></li>
-			</ul>
+			<p>
+				<label for="page-nav"><strong>Navigate:</strong></label>
+				<select id="page-nav" name="page-nav">
+					<option value="index.html">Home</option>
+					<option value="all-publications.html" selected>All Publications</option>
+				</select>
+			</p>
 		</div>
 	</header>
 
@@ -88,6 +92,15 @@
 	</div>
 
 	<script src="assets/js/jquery.min.js"></script>
+	<script>
+		(function () {
+			var pageNav = document.getElementById("page-nav");
+			if (!pageNav) return;
+			pageNav.addEventListener("change", function () {
+				if (this.value) window.location.href = this.value;
+			});
+		})();
+	</script>
 	<script src="assets/js/jquery.poptrox.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>

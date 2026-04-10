@@ -39,10 +39,13 @@
 				<h2>Hi, I'm Jordan</h2>
 			</header>
 
-			<ul class="actions">
-				<li><a href="media/mock-resume.pdf" class="button primary" target="_blank" rel="noopener noreferrer">Mock Resume</a></li>
-				<li><a href="all-publications.html" class="button">All Publications</a></li>
-			</ul>
+			<p>
+				<label for="page-nav"><strong>Navigate:</strong></label>
+				<select id="page-nav" name="page-nav">
+					<option value="index.html" selected>Home</option>
+					<option value="all-publications.html">All Publications</option>
+				</select>
+			</p>
 
 			<p>
 				I am a fictional profile used for template demos. This website keeps the same structure as a personal
@@ -120,9 +123,6 @@
 					<p>Mar 2022</p>
 				</article>
 			</div>
-			<ul class="actions">
-				<li><a href="all-publications.html" class="button small">Open All Publications</a></li>
-			</ul>
 		</section>
 
 		<section id="three">
@@ -140,6 +140,15 @@
 	</div>
 
 	<script src="assets/js/jquery.min.js"></script>
+	<script>
+		(function () {
+			var pageNav = document.getElementById("page-nav");
+			if (!pageNav) return;
+			pageNav.addEventListener("change", function () {
+				if (this.value) window.location.href = this.value;
+			});
+		})();
+	</script>
 	<script src="assets/js/jquery.poptrox.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
