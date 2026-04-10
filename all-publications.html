@@ -156,11 +156,25 @@
 		(function () {
 			var menu = document.getElementById("site-menu");
 			var toggle = document.getElementById("menu-toggle");
-			if (!menu || !toggle) return;
+			var panel = document.getElementById("menu-panel");
+			if (!menu || !toggle || !panel) return;
+
+			fetch("index.html")
+				.then(function (response) { return response.text(); })
+				.then(function (html) {
+					var sourceDoc = new DOMParser().parseFromString(html, "text/html");
+					var sourcePanel = sourceDoc.getElementById("menu-panel");
+					if (sourcePanel) panel.innerHTML = sourcePanel.innerHTML;
+				})
+				.catch(function () {
+					// Keep local menu items if index.html cannot be fetched.
+				});
+
 			toggle.addEventListener("click", function () {
 				var isOpen = menu.classList.toggle("open");
 				toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
 			});
+
 			document.addEventListener("click", function (event) {
 				if (!menu.contains(event.target)) {
 					menu.classList.remove("open");
