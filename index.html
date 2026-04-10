@@ -84,8 +84,8 @@
 		</button>
 		<div class="menu-panel" id="menu-panel">
 			<a href="index.html">Home</a>
-			<a href="all-publications.html">All Publications</a>
-			<a href="media/mock-resume.pdf" target="_blank" rel="noopener noreferrer">Mock Resume (PDF)</a>
+			<a href="all-publications.html">Publications</a>
+			<a href="media/mock-resume.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
 		</div>
 	</nav>
 
@@ -109,11 +109,12 @@
 	<div id="main">
 		<section id="one">
 			<header class="major">
-				<h2>Hi, I'm Jordan</h2>
+				<h2>Hi, I'm Seiji</h2>
 			</header>
 
 			<p>
-				I am a fictional profile used for template demos. This website keeps the same structure as a personal
+				I am a third-year PhD student at Nara Institute of Science and Technology. This website keeps the same
+				structure as a personal
 				academic homepage but replaces all identity-specific details with anonymized sample content.
 			</p>
 			<p>
@@ -148,10 +149,39 @@
 					<h4>Mar 2026: CLINICNOTE-LITE Demo Updated</h4>
 					<p>
 						Latest demo adds synthetic safety scenarios for summarization reliability.
-						<a href="https://example.com/clinicnote-lite" target="_blank" rel="noopener noreferrer">Open demo</a>.
+						<a href="https://example.com/clinicnote-lite" target="_blank" rel="noopener noreferrer">Open
+							demo</a>.
 					</p>
 				</article>
 			</div>
+			<div id="news-history" hidden>
+				<div class="row">
+					<article class="col-12">
+						<h4>Jan 2026: Synthetic Safety Eval Toolkit Added</h4>
+						<p>
+							Published a mock toolkit for stress-testing hallucination and policy adherence scenarios.
+							<a href="https://example.com/safety-toolkit" target="_blank" rel="noopener noreferrer">See toolkit</a>.
+						</p>
+					</article>
+					<article class="col-12">
+						<h4>Nov 2025: Multilingual Prompting Guide Released</h4>
+						<p>
+							Released an editable starter guide with sample prompts and evaluation templates.
+							<a href="https://example.com/prompting-guide" target="_blank" rel="noopener noreferrer">Read guide</a>.
+						</p>
+					</article>
+					<article class="col-12">
+						<h4>Sep 2025: Research Blog Launched</h4>
+						<p>
+							Started a mock blog series documenting experiment design and reproducibility notes.
+							<a href="https://example.com/blog" target="_blank" rel="noopener noreferrer">Visit blog</a>.
+						</p>
+					</article>
+				</div>
+			</div>
+			<ul class="actions">
+				<li><button id="news-toggle" class="button small">Show Full News History</button></li>
+			</ul>
 		</section>
 
 		<section id="two">
@@ -214,17 +244,34 @@
 		(function () {
 			var menu = document.getElementById("site-menu");
 			var toggle = document.getElementById("menu-toggle");
-			if (!menu || !toggle) return;
-			toggle.addEventListener("click", function () {
-				var isOpen = menu.classList.toggle("open");
-				toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-			});
-			document.addEventListener("click", function (event) {
-				if (!menu.contains(event.target)) {
-					menu.classList.remove("open");
-					toggle.setAttribute("aria-expanded", "false");
+			if (menu && toggle) {
+				toggle.addEventListener("click", function () {
+					var isOpen = menu.classList.toggle("open");
+					toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+				});
+				document.addEventListener("click", function (event) {
+					if (!menu.contains(event.target)) {
+						menu.classList.remove("open");
+						toggle.setAttribute("aria-expanded", "false");
+					}
+				});
+			}
+
+			var newsHistory = document.getElementById("news-history");
+			var newsToggle = document.getElementById("news-toggle");
+			if (newsHistory && newsToggle) {
+				newsToggle.addEventListener("click", function () {
+					var isHidden = newsHistory.hasAttribute("hidden");
+					if (isHidden) {
+						newsHistory.removeAttribute("hidden");
+						newsToggle.textContent = "Hide Full News History";
+					} else {
+						newsHistory.setAttribute("hidden", "");
+						newsToggle.textContent = "Show Full News History";
+					}
 				}
-			});
+				);
+			}
 		})();
 	</script>
 	<script src="assets/js/jquery.poptrox.min.js"></script>
