@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Jordan Vale | Mock Portfolio</title>
+	<title>Seiji Shimizu | Home</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -74,6 +74,20 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+
+		#two .work-item .image.thumb {
+			display: block;
+			aspect-ratio: 16 / 10;
+			overflow: hidden;
+			background: #fff;
+		}
+
+		#two .work-item .image.thumb img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: center;
+		}
 	</style>
 </head>
 
@@ -92,8 +106,8 @@
 	<header id="header">
 		<div class="inner">
 			<a href="#" class="image avatar"><img src="images/avatar.svg" alt="Abstract avatar" /></a>
-			<h1>I am a <strong>mock researcher</strong> at <strong>Sample Institute</strong><br />
-				working on <strong>reliable language systems</strong>.</h1>
+			<h1>I am a <strong>PhD student</strong> at <strong>NAIST</strong><br />
+				working on <strong>Clinical NLP</strong>.</h1>
 		</div>
 		<div class="inner">
 			<ul>
@@ -115,72 +129,47 @@
 			</header>
 
 			<p>
-				I am a third-year PhD student at Nara Institute of Science and Technology. This website keeps the same
-				structure as a personal
-				academic homepage but replaces all identity-specific details with anonymized sample content.
+				I am a PhD student at the Nara Institute of Science and Technology (NAIST), working on clinical natural
+				language processing. My research focuses on building practical and reliable language technologies for
+				real-world health care settings, especially in Japanese clinical text.
 			</p>
 			<p>
-				My mock research focus is building practical evaluation loops for multilingual assistants, with an
-				emphasis on robustness, reproducibility, and transparent reporting.
+				A central theme of my work is robustness under domain shift. Across my publications, I study how models
+				trained on one institution or document type can transfer to new hospitals and unseen note styles,
+				including disease name recognition and broader clinical information extraction.
 			</p>
 			<p>
-				Before this role, I held several imaginary industry positions as a machine learning engineer and data
-				scientist, then transitioned into applied research and mentorship.
+				I also work on privacy-preserving and data-sharing-aware methods: source-free domain adaptation,
+				LLM-assisted annotation when source data cannot be shared, and synthetic corpus generation (such as
+				RecordTwin) to improve accessibility of clinical NLP research while maintaining safety constraints.
 			</p>
 			<p>
-				Outside work, I enjoy long-distance running, sketching maps, and trying new coffee brewing methods.
+				More recently, my publications include benchmark and evaluation efforts for practical clinical tasks in
+				Japanese, as well as annotation methodologies that reduce expert burden (for example, QA-based temporal
+				relation annotation). Overall, I aim to make clinical NLP systems both deployable and trustworthy in
+				practice.
 			</p>
 
 			<h3>News</h3>
 			<div class="row">
 				<article class="col-12">
-					<h4>May 2026: POLARIS Benchmark v2 Released</h4>
+					<h4>Apr 2026: A paper accepted to ACL 2026 Findings</h4>
 					<p>
-						Expanded multilingual stress tests and updated scoring rubric are now available.
-						<a href="https://example.com/polaris" target="_blank" rel="noopener noreferrer">Read update</a>.
+						First-author paper "A Herd of Language Models Makes a Better Zero-shot Annotator for Clinical
+						Named Entity Recognition" accepted to ACL 2026 Findings.
 					</p>
 				</article>
 				<article class="col-12">
-					<h4>Apr 2026: AURORA-34B Training Notes Published</h4>
+					<h4>Feb 2026: A paper accepted to LREC 2026</h4>
 					<p>
-						New mock notes cover domain adaptation tips and evaluation checkpoints.
-						<a href="https://example.com/aurora" target="_blank" rel="noopener noreferrer">View notes</a>.
-					</p>
-				</article>
-				<article class="col-12">
-					<h4>Mar 2026: CLINICNOTE-LITE Demo Updated</h4>
-					<p>
-						Latest demo adds synthetic safety scenarios for summarization reliability.
-						<a href="https://example.com/clinicnote-lite" target="_blank" rel="noopener noreferrer">Open
-							demo</a>.
+						First-author paper "J-ClinicalBench: A Benchmark for Evaluating Large Language Models on
+						Practical Clinical Tasks in Japanese" accepted
+						to LREC 2026.
 					</p>
 				</article>
 			</div>
 			<div id="news-history" hidden>
 				<div class="row">
-					<article class="col-12">
-						<h4>Jan 2026: Synthetic Safety Eval Toolkit Added</h4>
-						<p>
-							Published a mock toolkit for stress-testing hallucination and policy adherence scenarios.
-							<a href="https://example.com/safety-toolkit" target="_blank" rel="noopener noreferrer">See
-								toolkit</a>.
-						</p>
-					</article>
-					<article class="col-12">
-						<h4>Nov 2025: Multilingual Prompting Guide Released</h4>
-						<p>
-							Released an editable starter guide with sample prompts and evaluation templates.
-							<a href="https://example.com/prompting-guide" target="_blank" rel="noopener noreferrer">Read
-								guide</a>.
-						</p>
-					</article>
-					<article class="col-12">
-						<h4>Sep 2025: Research Blog Launched</h4>
-						<p>
-							Started a mock blog series documenting experiment design and reproducibility notes.
-							<a href="https://example.com/blog" target="_blank" rel="noopener noreferrer">Visit blog</a>.
-						</p>
-					</article>
 				</div>
 			</div>
 			<ul class="actions">
@@ -192,39 +181,37 @@
 			<h2>Highlighted Publications</h2>
 			<div class="row">
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="all-publications.html#paper-1" class="image fit thumb">
-						<img src="images/thumbs/thump_include.svg" alt="Mock project card 1" />
+					<a href="all-publications.html" class="image fit thumb">
+						<img src="images/thumbs/ACL2026_intro.png" alt="Mock project card 1" />
 					</a>
-					<h3>POLARIS: Regional Prompt Robustness in Multilingual Assistants</h3>
-					<p>Nov 2025</p>
+					<h3>A Herd of Language Models Makes a Better Zero-shot Annotator for Clinical Named Entity
+						Recognition</h3>
+					<p>Findings of ACL 2026</p>
 				</article>
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="all-publications.html#paper-2" class="image fit thumb">
-						<img src="images/thumbs/thump_meditron.svg" alt="Mock project card 2" />
+					<a href="all-publications.html" class="image fit thumb">
+						<img src="images/thumbs/clinicalbench_intro_v6.png" alt="Mock project card 2" />
 					</a>
-					<h3>AURORA-34B: Practical Post-Training Recipes for Domain Adaptation</h3>
-					<p>May 2025</p>
+					<h3>J-ClinicalBench: A Benchmark for Evaluating Large Language Models on Practical Clinical Tasks in
+						Japanese</h3>
+					<p>LREC 2026</p>
 				</article>
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="all-publications.html#paper-3" class="image fit thumb">
-						<img src="images/thumbs/thump_crab.svg" alt="Mock project card 3" />
+					<a href="https://aclanthology.org/2025.findings-acl.759/" class="image fit thumb" target="_blank"
+						rel="noopener noreferrer">
+						<img src="images/thumbs/twin_record_fig.png" alt="Mock project card 3" />
 					</a>
-					<h3>TIDE: A Synthetic Toolkit for Causal Event Correlation Analysis</h3>
-					<p>Dec 2024</p>
+					<h3>RecordTwin: Towards Creating Safe Synthetic Clinical Corpora</h3>
+					<p>Findings of ACL 2025</p>
 				</article>
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="all-publications.html#paper-4" class="image fit thumb">
-						<img src="images/thumbs/thump_graphs.svg" alt="Mock project card 4" />
+					<a href="https://aclanthology.org/2025.findings-acl.757/" class="image fit thumb" target="_blank"
+						rel="noopener noreferrer">
+						<img src="images/thumbs/LLM_Active_intro.png" alt="Mock project card 4" />
 					</a>
-					<h3>GraphScope-LM: Interpreting Knowledge Paths in Foundation Models</h3>
-					<p>Aug 2023</p>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="all-publications.html#paper-5" class="image fit thumb">
-						<img src="images/thumbs/thump_scilens.svg" alt="Mock project card 5" />
-					</a>
-					<h3>SignalLens: Live Quality Diagnostics for News-Like Text Streams</h3>
-					<p>Mar 2022</p>
+					<h3>Exploring LLM Annotation for Adaptation of Clinical Information Extraction Models under
+						Data-Sharing Restrictions</h3>
+					<p>Findings of ACL 2025</p>
 				</article>
 			</div>
 		</section>
@@ -235,7 +222,7 @@
 				<div class="col-6 col-12-small">
 					<ul class="labeled-icons">
 						<li>
-							<a href="mailto:jordan.vale@example.com">jordan.vale@example.com</a>
+							✉️ shimizu.seiji.so8@is.naist.jp
 						</li>
 					</ul>
 				</div>

@@ -1,9 +1,46 @@
-MOCK RESUME
-===========
+SEIJI SHIMIZU
+=============
 
-Name: Jordan Vale
-Role: Research Engineer (Sample Profile)
-Location: Anytown, XX
-Email: jordan.vale@example.com
+Email: shimizu.seiji.so8@is.naist.jp
+Affiliation: Nara Institute of Science and Technology (NAIST)
+Role: PhD Student, Social Computing Laboratory
+Location: Nara, Japan
 
-This file is intentionally anonymized and contains fictional placeholder details.
+RESEARCH INTERESTS
+------------------
+- Clinical Natural Language Processing (Clinical NLP)
+- Robust deployment of LLM/NLP systems across hospitals and note styles
+- Privacy-preserving adaptation under data-sharing restrictions
+- LLM-assisted annotation and synthetic data for clinical applications
+
+SUMMARY
+-------
+PhD student working on practical and trustworthy clinical NLP, with emphasis on
+Japanese clinical text. Research focuses on robust information extraction under
+domain shift, source-free adaptation, clinical benchmark design, and safe
+synthetic corpus generation for real-world healthcare deployment.
+
+SELECTED PUBLICATIONS
+---------------------
+2026
+- A Herd of Language Models Makes a Better Zero-shot Annotator for Clinical
+  Named Entity Recognition (Findings of ACL 2026)
+- J-ClinicalBench: A Benchmark for Evaluating Large Language Models on
+  Practical Clinical Tasks in Japanese (LREC 2026)
+
+2025
+- Exploring LLM Annotation for Adaptation of Clinical Information Extraction
+  Models under Data-Sharing Restrictions (Findings of ACL 2025)
+- RecordTwin: Towards Creating Safe Synthetic Clinical Corpora
+  (Findings of ACL 2025)
+- Toward Cross-Hospital Deployment of NLP Systems: Model Development and
+  Validation of Fine-Tuned Large Language Models for Disease Name Recognition
+  in Japanese (JMIR Medical Informatics)
+
+2024
+- Generating Distributable Surrogate Corpus for Medical Multi-Label
+  Classification (CL4Health @ LREC-COLING)
+- QA-based Event Start-Points Ordering for Clinical Temporal Relation
+  Annotation (LREC-COLING 2024)
+- Improving Self-Training with Prototypical Learning for Source-Free Domain
+  Adaptation on Clinical Text (BioNLP 2024)
