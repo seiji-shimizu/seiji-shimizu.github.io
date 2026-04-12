@@ -4,10 +4,10 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="ja">
 
 <head>
-	<title>Seiji Shimizu | Home</title>
+	<title>清水 聖司 | ホーム</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -93,14 +93,14 @@
 
 <body class="is-preload">
 	<nav class="menu-wrap" id="site-menu">
-		<button class="menu-button" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+		<button class="menu-button" id="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
 			<span></span><span></span><span></span>
 		</button>
 		<div class="menu-panel" id="menu-panel">
-			<a href="index.html">Home</a>
-			<a href="all-publications.html">Publications</a>
+			<a href="index-ja.html">ホーム</a>
+			<a href="all-publications.html">業績一覧</a>
 			<a href="media/mock-resume.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
-			<a href="index-ja.html">日本語</a>
+			<a href="index.html">English</a>
 		</div>
 	</nav>
 
@@ -125,51 +125,42 @@
 
 	<div id="main">
 		<section id="one">
-			<header class="major">
-				<h2>Hi, I'm Seiji</h2>
-			</header>
+			<h2>研究概要</h2>
 
 			<p>
-				I am a PhD student at the Nara Institute of Science and Technology (NAIST) in Japan, working on clinical
-				natural
-				language processing under the supervision of Prof. Eiji Aramaki at the
-				<a href="https://sociocom.naist.jp/index/" target="_blank" rel="noopener noreferrer">Social Computing
-					Lab</a>.
-				My research focuses on developing practical and reliable language technologies for real-world health
-				care settings.
+				奈良先端科学技術大学院大学（NAIST）博士後期課程に在籍し，
+				<a href="https://sociocom.naist.jp/index/" target="_blank"
+					rel="noopener noreferrer">ソーシャル・コンピューティング研究室</a>
+				（指導教員：荒牧 英治 教授）にて臨床自然言語処理（Clinical NLP）を研究しています．
 			</p>
 
 			<p>
-				A central theme of my work is <strong>robustness under domain shift</strong>. Across my publications, I
-				investigate how models
-				trained on one institution or document type can generalize to new hospitals and unseen note styles,
-				particularly in clinical information extraction.
-				I also work on <strong>privacy-preserving synthetic corpus generation</strong> to improve the
-				accessibility of clinical NLP
-				research while protecting patient privacy.
+				特に，言語モデルの <strong>ドメインシフト下での頑健性</strong> に関する研究に興味があり，
+				特定の病院のデータ・一般ドメインで学習したモデルを，新しい病院や新しい診療科のテキストに適応させる方法について研究しています．
+				また，<strong>患者プライバシー保護</strong>と<strong>臨床テキストの研究利用</strong>の両立を目指し，
+				合成臨床コーパス生成 にも取り組んでいます．
 			</p>
 
 			<p>
-				In addition to English, I conduct research on Japanese clinical texts, focusing on <strong>language
-					resource construction</strong>. My work includes benchmark construction and evaluation for practical
-				clinical
-				tasks in Japanese (<a href="https://github.com/seiji-shimizu/J-ClinicalBench-release" target="_blank"
-					rel="noopener noreferrer">J-ClinicalBench</a>), as well as annotation methodologies that reduce
-				expert burden. Overall, I aim to make clinical NLP systems both
-				deployable
-				and trustworthy in practice.
+				日本語臨床テキストを対象とした
+				<strong>言語資源構築</strong> も進めています．
+				具体的には，日本語の実臨床タスク向けベンチマーク
+				(<a href="https://github.com/seiji-shimizu/J-ClinicalBench-release" target="_blank"
+					rel="noopener noreferrer">J-ClinicalBench</a>) の構築・評価，
+				専門家の注釈負荷を軽減するアノテーション手法の研究などを行っています．
+				最終的には, 臨床現場において, 言語処理システムを実用的かつ信頼性の高い形で社会実装することを目指しています.
 			</p>
 			<hr />
-			<h3>News</h3>
+			<h3>ニュース</h3>
 
 			<ul>
 				<li>
-					<strong>Apr 2026:</strong> A paper accepted to ACL 2026 Findings —
+					<strong>2026年4月:</strong> ACL 2026 Findings に採択されました —
 					"A Herd of Language Models Makes a Better Zero-shot Annotator for Clinical Named Entity
 					Recognition".
 				</li>
 				<li>
-					<strong>Feb 2026:</strong> A paper accepted to LREC 2026 —
+					<strong>2026年2月:</strong> LREC 2026 に採択されました —
 					"J-ClinicalBench: A Benchmark for Evaluating Large Language Models on Practical Clinical Tasks in
 					Japanese".
 				</li>
@@ -177,20 +168,20 @@
 
 			<div id="news-history" hidden>
 				<ul>
-					<!-- future older news items here -->
+					<!-- ここに過去のニュースを追加 -->
 				</ul>
 			</div>
 			<ul class="actions">
-				<li><button id="news-toggle" class="button small">Show Full News History</button></li>
+				<li><button id="news-toggle" class="button small">ニュース履歴を表示</button></li>
 			</ul>
 		</section>
 
 		<section id="two">
-			<h2>Highlighted Publications</h2>
+			<h2>主要論文</h2>
 			<div class="row">
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="all-publications.html" class="image fit thumb">
-						<img src="images/thumbs/ACL2026_intro.png" alt="Mock project card 1" />
+						<img src="images/thumbs/ACL2026_intro.png" alt="publication image 1" />
 					</a>
 					<h3>A Herd of Language Models Makes a Better Zero-shot Annotator for Clinical Named Entity
 						Recognition</h3>
@@ -198,7 +189,7 @@
 				</article>
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="all-publications.html" class="image fit thumb">
-						<img src="images/thumbs/clinicalbench_intro_v6.png" alt="Mock project card 2" />
+						<img src="images/thumbs/clinicalbench_intro_v6.png" alt="publication image 2" />
 					</a>
 					<h3>J-ClinicalBench: A Benchmark for Evaluating Large Language Models on Practical Clinical Tasks in
 						Japanese</h3>
@@ -207,7 +198,7 @@
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="https://aclanthology.org/2025.findings-acl.759/" class="image fit thumb" target="_blank"
 						rel="noopener noreferrer">
-						<img src="images/thumbs/twin_record_fig.png" alt="Mock project card 3" />
+						<img src="images/thumbs/twin_record_fig.png" alt="publication image 3" />
 					</a>
 					<h3>RecordTwin: Towards Creating Safe Synthetic Clinical Corpora</h3>
 					<p>Findings of ACL 2025</p>
@@ -215,7 +206,7 @@
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="https://aclanthology.org/2025.findings-acl.757/" class="image fit thumb" target="_blank"
 						rel="noopener noreferrer">
-						<img src="images/thumbs/LLM_Active_intro.png" alt="Mock project card 4" />
+						<img src="images/thumbs/LLM_Active_intro.png" alt="publication image 4" />
 					</a>
 					<h3>Exploring LLM Annotation for Adaptation of Clinical Information Extraction Models under
 						Data-Sharing Restrictions</h3>
@@ -225,7 +216,7 @@
 		</section>
 
 		<section id="three">
-			<h2>Get In Touch</h2>
+			<h2>連絡先</h2>
 			<div class="row">
 				<div class="col-6 col-12-small">
 					<ul class="labeled-icons">
@@ -263,13 +254,12 @@
 					var isHidden = newsHistory.hasAttribute("hidden");
 					if (isHidden) {
 						newsHistory.removeAttribute("hidden");
-						newsToggle.textContent = "Hide Full News History";
+						newsToggle.textContent = "ニュース履歴を非表示";
 					} else {
 						newsHistory.setAttribute("hidden", "");
-						newsToggle.textContent = "Show Full News History";
+						newsToggle.textContent = "ニュース履歴を表示";
 					}
-				}
-				);
+				});
 			}
 		})();
 	</script>
