@@ -88,6 +88,41 @@
 			object-fit: contain;
 			object-position: center;
 		}
+
+		.highlight-blue {
+			background-color: #e6f0ff;
+		}
+
+		.highlight-red {
+			background-color: #ffe6e6;
+		}
+
+		.highlight-yellow {
+			background-color: #fff9e6;
+		}
+
+		.highlight-green {
+			background-color: #e6f7ea;
+		}
+
+		.highlight-orange {
+			background-color: #fff0e6;
+		}
+
+		.highlight-teal {
+			background-color: #e6f7f7;
+		}
+
+		/* optional: improve readability */
+		.highlight-blue,
+		.highlight-red,
+		.highlight-yellow,
+		.highlight-green,
+		.highlight-orange,
+		.highlight-teal {
+			padding: 0.1em 0.3em;
+			border-radius: 0.25em;
+		}
 	</style>
 </head>
 
@@ -135,16 +170,19 @@
 			</p>
 
 			<p>
-				研究の主なテーマは，臨床ドメインにおける<strong>データの希少性・ドメインシフト・データ共有制約</strong>への対処と<strong>患者プライバシーの保護</strong>です．
-				特に，言語モデルの <strong>ドメインシフト下での頑健性</strong> に関する研究に興味があり，
+				研究の主なテーマは，臨床ドメインにおける<span class="highlight-red"><strong>データの希少性</strong></span>・<span
+					class="highlight-yellow"><strong>ドメインシフト</strong></span>・<span
+					class="highlight-blue"><strong>データ共有制約</strong></span>への対処と<span
+					class="highlight-green"><strong>患者プライバシーの保護</strong></span>です．
+				特に，言語モデルの <span class="highlight-orange"><strong>ドメインシフト下での頑健性</strong></span> に関する研究に興味があり，
 				特定の病院のデータ・一般ドメインで学習したモデルを，さまざまな病院や診療科のテキストに適応させる方法について研究しています．
-				また，<strong>患者プライバシー保護</strong>と<strong>臨床テキストの研究利用</strong>の両立を目指し，
-				合成臨床コーパス生成 にも取り組んでいます．
+				また，<strong>臨床テキストの研究利用</strong>と<strong>患者プライバシー保護</strong>の両立を目指し，
+				<span class="highlight-teal"><strong>合成臨床コーパス生成</strong></span> にも取り組んでいます．
 			</p>
 
 			<p>
 				日本語臨床テキストを対象とした
-				<strong>言語資源構築</strong> も進めています．
+				<span class="highlight-red"><strong>言語資源構築</strong></span> も進めています．
 				具体的には，日本語の実臨床タスク向けベンチマーク
 				(<a href="https://github.com/seiji-shimizu/J-ClinicalBench-release" target="_blank"
 					rel="noopener noreferrer">J-ClinicalBench</a>) の構築・評価，

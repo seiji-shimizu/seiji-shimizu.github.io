@@ -88,6 +88,41 @@
 			object-fit: contain;
 			object-position: center;
 		}
+
+		.highlight-blue {
+			background-color: #e6f0ff;
+		}
+
+		.highlight-red {
+			background-color: #ffe6e6;
+		}
+
+		.highlight-yellow {
+			background-color: #fff9e6;
+		}
+
+		.highlight-green {
+			background-color: #e6f7ea;
+		}
+
+		.highlight-orange {
+			background-color: #fff0e6;
+		}
+
+		.highlight-teal {
+			background-color: #e6f7f7;
+		}
+
+		/* optional: improve readability */
+		.highlight-blue,
+		.highlight-red,
+		.highlight-yellow,
+		.highlight-green,
+		.highlight-orange,
+		.highlight-teal {
+			padding: 0.1em 0.3em;
+			border-radius: 0.25em;
+		}
 	</style>
 </head>
 
@@ -140,20 +175,26 @@
 			</p>
 
 			<p>
-				A central theme of my work is addressing <strong>data scarcity, domain shift, and data-sharing
-					constraints</strong> in
+				A central theme of my work is addressing <span class="highlight-red"><strong>data
+						scarcity</strong></span>, <span class="highlight-yellow"><strong>domain shift</strong></span>,
+				and <span class="highlight-blue"><strong>data-sharing constraints</strong></span> in
 				the clinical domain while
-				<strong>protecting patient privacy</strong>. My research focuses on <strong>robustness under domain
-					shift</strong>, particularly on how models trained on data from one institution or document type can
+				<span class="highlight-green"><strong>protecting patient privacy</strong></span>. My research focuses on
+				<span class="highlight-orange"><strong>robustness under domain
+						shift</strong></span>, particularly on how models trained on data from one institution or
+				document type can
 				generalize to new hospitals and previously unseen note styles in clinical information extraction.
 
-				In parallel, I work on <strong>privacy-preserving synthetic corpus generation</strong>, developing
+				In parallel, I work on <span class="highlight-teal"><strong>privacy-preserving synthetic corpus
+						generation</strong></span>, developing
 				methods to make clinical NLP research more accessible without compromising patient privacy.
 			</p>
 
 			<p>
-				In addition to English, I conduct research on Japanese clinical texts, focusing on <strong>language
-					resource construction</strong>. My work includes benchmark construction and evaluation for practical
+				In addition to English, I conduct research on Japanese clinical texts, focusing on <span
+					class="highlight-red"><strong>language
+						resource construction</strong></span>. My work includes benchmark construction and evaluation
+				for practical
 				clinical
 				tasks in Japanese (<a href="https://github.com/seiji-shimizu/J-ClinicalBench-release" target="_blank"
 					rel="noopener noreferrer">J-ClinicalBench</a>), as well as annotation methodologies that reduce
